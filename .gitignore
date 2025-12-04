@@ -1,0 +1,65 @@
+# Claude Code Config - .gitignore
+
+# Credenciales y secretos
+*.key
+*.pem
+*.env
+.env.local
+.env.*.local
+secrets.json
+credentials.json
+
+# Backups
+*.backup
+*.bak
+*.old
+*~
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS específicos
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Datos sensibles
+tokens.json
+auth.json
+*.token
+
+# Archivos temporales
+tmp/
+temp/
+.tmp
+.cache/
+
+# Archivos de configuración local con credenciales
+# (Descomenta si necesitas ignorar settings con credenciales)
+# settings.local.json

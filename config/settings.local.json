@@ -1,0 +1,56 @@
+{
+  "env": {
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "8000",
+    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
+    "DISABLE_COST_WARNINGS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(dir C:Userssergi.claudeagents)",
+      "Bash(dir C:Userssergi.claudecommands)",
+      "Bash(powershell -Command \"irm https://deno.land/install.ps1 | iex\")",
+      "Bash(deno --version:*)",
+      "Bash(\"C:\\Users\\sergi\\.deno\\bin\\deno.exe\" --version)",
+      "Bash(cmd.exe /c \"C:\\Users\\sergi\\.deno\\bin\\deno.exe\" --version)",
+      "Bash(npm install:*)",
+      "mcp__code-executor__health",
+      "Bash(code-executor-mcp:*)",
+      "Bash(dir \"C:\\Users\\sergi\\.deno\\bin\")",
+      "Bash(powershell:*)",
+      "mcp__code-executor__executeTypescript",
+      "mcp__github__search_repositories",
+      "Bash(cat:*)",
+      "Bash(findstr:*)",
+      "Bash(where:*)",
+      "WebSearch",
+      "Bash(if not exist \"C:\\Users\\sergi\\.claude\\plans\" mkdir \"C:\\Users\\sergi\\.claude\\plans\")",
+      "Bash(cmd /c \"if not exist C:\\Users\\sergi\\.claude\\plans mkdir C:\\Users\\sergi\\.claude\\plans\")",
+      "Bash(copy:*)",
+      "Bash(cmd /c copy:*)",
+      "Bash(pip install:*)",
+      "Bash(tasklist:*)",
+      "Bash(dir \"C:\\Users\\sergi\\.claude\")",
+      "Bash(dir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "memory",
+    "executeautomation-playwright-server",
+    "fetch",
+    "github",
+    "postgresql",
+    "code-executor",
+    "context7",
+    "ddg-search",
+    "excel"
+  ],
+  "statusLine": {
+    "type": "command",
+    "command": "python .claude/scripts/context-monitor.py"
+  }
+}
